@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Container, CompletedWords, TypedKeys, ValidKeys} from './styles'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={Container}>
+      <div className={ValidKeys}>
+        <span className="matched"></span>
+        <span className="remainder"></span>
+      </div>
+      <div className={TypedKeys}></div>
+      <div className={CompletedWords}>
+        <ol>
+          <li></li>
+        </ol>
+      </div>
+      
     </div>
   );
 }
